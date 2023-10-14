@@ -1,5 +1,6 @@
-package com.s2.s2;
+package endpoints;
 
+import com.s2.s2.Person;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
