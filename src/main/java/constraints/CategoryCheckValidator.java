@@ -16,6 +16,9 @@ public class CategoryCheckValidator
     public boolean isValid(
             String sentValue,
             ConstraintValidatorContext context) {
+        if(sentValue == null) {
+            return false;
+        }
         for(Category val: Category.values()) {
             if(Objects.equals(val.toString().toLowerCase(), sentValue.toLowerCase())) {
                 return true;

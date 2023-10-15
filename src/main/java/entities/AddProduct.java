@@ -10,5 +10,6 @@ public class AddProduct {
     public String name;
 
     @CategoryCheck
+    @NotEmpty(message = "No category provided")
     public String category;
 }
