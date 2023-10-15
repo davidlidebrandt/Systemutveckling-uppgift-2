@@ -1,12 +1,17 @@
 package entities;
 
+import jakarta.validation.constraints.NotEmpty;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
 public class Product {
-
     private String id;
+
+    @NotEmpty(message = "No empty names allowed")
     private String name;
+
+    @NotEmpty(message = "No empty categories allowed")
     private Category category;
     private int rating;
     private final LocalDate createdAt;
