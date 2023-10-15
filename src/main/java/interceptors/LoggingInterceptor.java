@@ -14,21 +14,11 @@ public class LoggingInterceptor {
 
     Logger logger = LoggerFactory.getLogger(LoggingInterceptor.class);
 
-
     @AroundInvoke
     public Object logMethodEntry(InvocationContext context) throws Exception {
         logger.info("Call to method: " + context.getMethod().getName() + " in "
                     + context.getMethod().getDeclaringClass());
-        try {
-            context.proceed();
-        }
-        catch (Exception e) {
-            logger.error("error");
-        }
         return context.proceed();
-
     }
-
-
 
 }
